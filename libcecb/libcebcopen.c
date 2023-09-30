@@ -490,7 +490,7 @@ static error_code validate_pathlist(cecb_path_id path, char *pathlist)
 
 		p++;
 
-		strncpy(path->filename, p, 8);
+		memcpy(path->filename, p, 8);
 
 		/* Space fill remaining characters */
 		for (i = strlen(p); i < 8; i++)
